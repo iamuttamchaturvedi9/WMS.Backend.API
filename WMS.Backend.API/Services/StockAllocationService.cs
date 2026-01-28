@@ -108,7 +108,6 @@ public class StockAllocationService
             await _skuRepository.UpdateSKUAsync(sku);
 
             await _allocationRepository.SaveAllocationAsync(allocation);
-            lineItem.Allocations.Add(allocation);
 
             lineItem.AllocatedQuantity += quantityToAllocate;
             remainingQuantity -= quantityToAllocate;
